@@ -3,8 +3,11 @@
 <h5 class="waves-effect waves-light btn"><%= button_to "Add List", new_list_path %></h5>
 <hr>
 <% @lists.each do |list| %>
+<%= link_to 'Delete',lists_path, method: :delete %>   
     <%= list.name %>
     <li>
       <%= list.body %>
     </li>
+    <br>
+    
 <% end %>
