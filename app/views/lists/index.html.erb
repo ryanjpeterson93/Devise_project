@@ -1,3 +1,10 @@
-<h1>Lists#index</h1>
-<h2>Here are all of your to-do lists, <%= current_user.first_name %></h2>
-<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h1>To-Do Lists</h1>
+<h3>Here are all of your to-do lists, <%= current_user.first_name %></h3>
+<h5 class="waves-effect waves-light btn"><%= button_to "Add List", new_list_path %></h5>
+<hr>
+<% @lists.each do |list| %>
+    <%= list.name %>
+    <li>
+      <%= list.body %>
+    </li>
+<% end %>

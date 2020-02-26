@@ -1,2 +1,13 @@
 <h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+
+<%= form_with(model: @list, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+    <%= f.submit %>
+<% end %>

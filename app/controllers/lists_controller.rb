@@ -10,16 +10,22 @@ before_action :set_list, only: [:show, :edit, :update]
   end
 
   def new
-
+    @list = List.new
   end
 
-  def edit
+  def create
     @list = current_user.lists.new(list_params)
     if @list.save
+      flash[:success] = "List Created"
       redirect_to lists_path
     else
+      flash[:error] = "Error #{@list.errors.full_messages.join('\n')}"
       render :new
     end
+  end
+
+  def edit 
+
   end
 
   def update
