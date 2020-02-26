@@ -1,9 +1,9 @@
 <h1>To-Do Lists</h1>
 <h3>Here are all of your to-do lists, <%= current_user.first_name %></h3>
-<h5 class="waves-effect waves-light btn"><%= button_to "Add List", new_list_path %></h5>
+<%= button_to "Add List", new_list_path, method: :get %>
 <hr>
 <% @lists.each do |list| %>
-<%= link_to 'Delete',lists_path, method: :delete %>   
+<%= button_to 'Delete',lists_path, method: :delete %>   
     <%= list.name %>
     <li>
       <%= list.body %>
