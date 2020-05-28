@@ -1,24 +1,15 @@
-# README
+# Devise Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Assignment given as part of the DevPoint Labs Full Stack Web Development Course
 
-Things you may want to cover:
+#### Week 4
 
-* Ruby version
+-Create a new Rails project and add two models. 
 
-* System dependencies
+-User model (use devise to generate this)
 
-* Configuration
+-Model of your choice (food, hobby, todo,  etc...)
 
-* Database creation
+-User will have many of the model of your choosing. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-Handle all CRUD actions for your model.
